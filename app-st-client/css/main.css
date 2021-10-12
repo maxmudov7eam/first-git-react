@@ -1,0 +1,531 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden; }
+  html body {
+    width: 100%;
+    overflow-x: hidden;
+    background: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #191919;
+    position: relative; }
+    html body .container {
+      width: 1350px;
+      padding: 0 10px;
+      margin: 0 auto; }
+    html body .d-flex {
+      display: flex; }
+    html body .row {
+      display: flex;
+      align-items: center; }
+    html body .align-items-center {
+      align-items: center; }
+    html body .justify-content-center {
+      justify-content: center; }
+    html body .justify-content-between {
+      justify-content: space-between; }
+    html body .spiner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      position: fixed;
+      background: rgba(255, 255, 255, 0.6);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      right: 0;
+      top: 0;
+      bottom: 0;
+      left: 0; }
+    html body a {
+      color: #2E2E2E;
+      text-decoration: none; }
+      html body a:hover {
+        color: #535353;
+        text-decoration: none; }
+    html body ul, html body li {
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+    html body h1, html body h2, html body h3, html body h4, html body h5, html body h6, html body p {
+      margin-bottom: 0; }
+    html body .cursor {
+      cursor: pointer; }
+    html body .myBtn {
+      font-weight: bold;
+      transition: all .5s ease-in-out;
+      cursor: pointer; }
+      html body .myBtn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 20px rgba(245, 234, 234, 0.866); }
+    html body .navbar {
+      padding: 30px 0 30px 0;
+      background-color: #fff;
+      border-bottom: 1px solid #F2F2F2;
+      width: 100%;
+      left: 0px;
+      position: fixed;
+      top: 0;
+      transition: all .7s ease-in-out; }
+      html body .navbar .navbar-left li a {
+        color: #8D989D;
+        margin-right: 40px;
+        font-weight: 600; }
+        html body .navbar .navbar-left li a.active {
+          color: #3456AF;
+          margin-right: 29.5px; }
+          html body .navbar .navbar-left li a.active span {
+            margin-right: 4px;
+            transform: translateY(3px); }
+      html body .navbar .navbar-right li a {
+        color: #191919;
+        font-weight: 600;
+        cursor: auto; }
+        html body .navbar .navbar-right li a span {
+          color: #8D989D;
+          margin-right: 8px; }
+      html body .navbar.active {
+        padding: 18.5px 0;
+        box-shadow: 0 3px 10px silver; }
+    html body .line {
+      padding-bottom: 73px; }
+    html body .logo-section {
+      padding: 21px 0; }
+      html body .logo-section .logo-section__logo {
+        margin-right: 30px; }
+      html body .logo-section .logo-section__input {
+        border-radius: 8px;
+        background: #FFFFFF;
+        border: 1px solid #F2F2F2;
+        margin-right: 80px; }
+        html body .logo-section .logo-section__input .input-left {
+          padding: 16px 16px 17px 24px;
+          background: #F2F2F2; }
+          html body .logo-section .logo-section__input .input-left p {
+            margin-right: 32px;
+            font-weight: 600; }
+        html body .logo-section .logo-section__input .input-right {
+          padding: 16px 16px 9px 20px;
+          width: 500px; }
+          html body .logo-section .logo-section__input .input-right input {
+            width: 90%;
+            font-size: 16px;
+            border: none;
+            font-weight: 600;
+            outline: none; }
+            html body .logo-section .logo-section__input .input-right input:focus-visible {
+              outline: none; }
+      html body .logo-section .logo-section__button .card {
+        padding: 9px 12px;
+        background: #F2F2F2;
+        border-radius: 8px; }
+        html body .logo-section .logo-section__button .card:first-child {
+          margin-right: 16px; }
+        html body .logo-section .logo-section__button .card:last-child h5 {
+          padding: 0 27px 0 10px;
+          font-weight: 600; }
+    html body .tabs {
+      background: #FFFFFF;
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.08);
+      margin-top: 4px;
+      margin-bottom: 24px; }
+      html body .tabs .card {
+        cursor: pointer;
+        padding: 22px 30px;
+        padding: 22px 40px;
+        background-color: #fff;
+        transition: all .3s ease-in-out; }
+        html body .tabs .card h5 {
+          font-size: 18px;
+          line-height: 23px;
+          font-weight: 600;
+          color: #191919;
+          transition: all .3s ease-in-out; }
+          html body .tabs .card h5 a {
+            transition: all .3s ease-in-out; }
+        html body .tabs .card p {
+          font-size: 12px;
+          line-height: 12px;
+          color: #8D989D;
+          transition: all .3s ease-in-out; }
+        html body .tabs .card .arrow {
+          padding-left: 15px; }
+        html body .tabs .card:last-child {
+          padding: 17px 40px; }
+        html body .tabs .card.active {
+          background: #3456AF;
+          padding: 19px 25px 21px 38px;
+          margin-right: 27px; }
+          html body .tabs .card.active h5 {
+            color: #fff; }
+          html body .tabs .card.active span {
+            transform: translateY(3px) translateX(-15px); }
+        html body .tabs .card:hover {
+          background-color: #3456AF; }
+          html body .tabs .card:hover h5 {
+            color: #fff; }
+          html body .tabs .card:hover p {
+            color: #fff; }
+          html body .tabs .card:hover a {
+            color: #fff; }
+    html body .header .container {
+      background-image: url(../assets/image/header-bg.png);
+      background-size: cover;
+      object-fit: contain;
+      background-repeat: no-repeat;
+      padding-left: 89px; }
+    html body .header h1 {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 52px;
+      color: #FFFFFF;
+      width: 770px;
+      padding-top: 60px; }
+    html body .header p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #FFFFFF;
+      width: 716px;
+      margin-top: 16px;
+      padding-bottom: 108px; }
+    html body .products {
+      padding: 74px 0 27px; }
+      html body .products .container {
+        border-bottom: 1px solid #F2F2F2; }
+      html body .products .card {
+        margin-right: 8px; }
+        html body .products .card h5 {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 21px;
+          color: #191919;
+          margin-left: 8px; }
+        html body .products .card:last-child {
+          margin-left: 0px; }
+    html body .spare {
+      padding-bottom: 32px; }
+      html body .spare h2 {
+        margin: 60px 0 24px !important;
+        font-weight: 700; }
+      html body .spare .first {
+        width: 200px; }
+      html body .spare .card {
+        background: #FAFAFA;
+        border: 2px solid transparent;
+        border-radius: 16px;
+        transition: all .3s ease-in-out;
+        padding: 16px 16px 8px 16px;
+        margin-right: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        html body .spare .card h5 {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 26px;
+          color: #191919;
+          transition: all .3s ease-in-out; }
+        html body .spare .card p {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 21px;
+          color: #8D989D;
+          margin-top: 8px; }
+        html body .spare .card a {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          display: flex;
+          background: #F2F2F2;
+          margin: 0 auto;
+          transition: all .1s ease-in-out;
+          align-items: center;
+          justify-content: center; }
+          html body .spare .card a .white {
+            display: none; }
+          html body .spare .card a .silver {
+            display: flex; }
+          html body .spare .card a img {
+            border-radius: 50%;
+            width: 24px;
+            height: 24px; }
+        html body .spare .card:last-child {
+          margin-right: 0px; }
+        html body .spare .card:hover {
+          border-color: #3456AF; }
+          html body .spare .card:hover h5 {
+            color: #3456AF; }
+          html body .spare .card:hover a {
+            background-color: #3456AF; }
+            html body .spare .card:hover a .silver {
+              display: none; }
+            html body .spare .card:hover a .white {
+              display: flex; }
+    html body .companies {
+      padding-bottom: 50px; }
+      html body .companies h5 {
+        margin-bottom: 5px !important;
+        font-size: 20px;
+        line-height: 26px;
+        font-weight: 700;
+        color: #000000;
+        padding-left: 16px; }
+      html body .companies li {
+        width: 200px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        border-radius: 10px; }
+        html body .companies li a {
+          background: #FFFFFF;
+          border-radius: 8px;
+          font-weight: 550;
+          font-size: 14px;
+          line-height: 18px;
+          color: #000000;
+          opacity: 0.5;
+          transition: all .3s ease-in-out;
+          padding-left: 16px;
+          background-color: transparent; }
+        html body .companies li:hover {
+          background: #F2F2F2; }
+          html body .companies li:hover a {
+            opacity: 1; }
+    html body .action {
+      padding-bottom: 60px; }
+      html body .action .container {
+        overflow-x: hidden; }
+      html body .action h2 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 24px;
+        color: #191919; }
+      html body .action a {
+        font-weight: 550;
+        font-size: 14px;
+        line-height: 18px;
+        color: #3456AF;
+        background: #F7F8FA;
+        border-radius: 12px;
+        padding: 9px 25px; }
+      html body .action .action__slider {
+        position: relative;
+        margin-top: 16px; }
+        html body .action .action__slider .buttons {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          cursor: pointer;
+          background-color: #fff;
+          z-index: 1111; }
+          html body .action .action__slider .buttons.left {
+            left: -10px;
+            transform: translateY(-50%) rotate(90deg); }
+          html body .action .action__slider .buttons.right {
+            right: -10px;
+            transform: translateY(-50%) rotate(-90deg); }
+        html body .action .action__slider .slider-left {
+          transform: translateX(-56px); }
+        html body .action .action__slider .slider-right {
+          transform: translateX(56px); }
+    html body .news {
+      padding-bottom: 60px; }
+      html body .news h2 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 24px;
+        color: #191919; }
+      html body .news a {
+        font-weight: 550;
+        font-size: 14px;
+        line-height: 18px;
+        color: #3456AF;
+        background: #F7F8FA;
+        border-radius: 12px;
+        padding: 9px 25px; }
+      html body .news .card {
+        background: #F2F2F2;
+        border-radius: 16px;
+        padding: 24px 30px 24px 24px;
+        margin-right: 30px;
+        margin-top: 17px; }
+        html body .news .card .card__left {
+          margin-right: 32px; }
+        html body .news .card h3 {
+          font-weight: 700;
+          font-size: 40px;
+          line-height: 52px;
+          color: #FC3B3E; }
+        html body .news .card h6 {
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 16px;
+          color: #FC3B3E; }
+        html body .news .card h4 {
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 31px;
+          color: #191919; }
+        html body .news .card p {
+          margin-top: 12px;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 23px;
+          color: #191919;
+          opacity: 0.7; }
+        html body .news .card:last-child {
+          margin-right: 0px; }
+    html body .text {
+      padding-bottom: 60px; }
+      html body .text h2 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 32px;
+        color: #000000;
+        margin-bottom: 32px; }
+      html body .text p {
+        font-size: 16px;
+        line-height: 24px;
+        color: #191919;
+        font-weight: 500; }
+      html body .text li {
+        font-weight: 500; }
+      html body .text .margin-bottom {
+        margin-bottom: 28px !important; }
+    html body .pre-footer {
+      background: #F2F2F2;
+      padding: 52px 0 88px; }
+      html body .pre-footer h2 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 32px;
+        color: #000000; }
+      html body .pre-footer p {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 21px;
+        margin: 16px 0;
+        color: #000000;
+        opacity: 0.7; }
+        html body .pre-footer p.mini {
+          width: 70%; }
+      html body .pre-footer input {
+        background: #FFFFFF;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 130%;
+        color: #8D989D;
+        padding: 12px 260px 12px 16px;
+        margin-right: 8px; }
+      html body .pre-footer a {
+        background: #3456AF;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 21px;
+        color: #F2F2F2;
+        padding: 12px 34px; }
+      html body .pre-footer h6 {
+        font-weight: 550;
+        font-size: 12px;
+        line-height: 16px;
+        color: #8D989D;
+        opacity: 0.7;
+        margin-top: 8px; }
+      html body .pre-footer .pre-footer__right {
+        transform: translateY(-30px); }
+    html body .footer {
+      padding-bottom: 52px;
+      background: #F2F2F2; }
+      html body .footer .ml-auto {
+        margin-left: auto; }
+      html body .footer a {
+        font-weight: normal;
+        font-size: 14px;
+        color: #333333; }
+      html body .footer li {
+        margin-bottom: 16px;
+        width: 100%; }
+      html body .footer .myUl {
+        width: 190px; }
+      html body .footer .phone {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 31px;
+        color: #3456AF; }
+        html body .footer .phone ~ span {
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 18px;
+          color: #191919;
+          opacity: 0.5; }
+      html body .footer h5 {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 21px;
+        color: #333333;
+        margin-bottom: 18px !important; }
+      html body .footer .mr {
+        margin-right: 24px; }
+      html body .footer .footer__left {
+        margin-right: 40px; }
+        html body .footer .footer__left.twice {
+          margin-right: 80px; }
+        html body .footer .footer__left.three {
+          margin-right: 130px; }
+    html body .loader {
+      width: 200px;
+      margin: 0 auto; }
+      html body .loader .loader-one {
+        width: 100px;
+        height: 100px;
+        border: 2px solid;
+        border-radius: 50%;
+        border-color: transparent #000;
+        padding: 15px;
+        box-sizing: border-box;
+        animation: loader 1s infinite linear; }
+      html body .loader .loader-two {
+        width: 100%;
+        height: 100%;
+        border: 2px solid;
+        border-radius: 50%;
+        border-color: black transparent;
+        padding: 15px;
+        box-sizing: border-box;
+        animation: loaderSecond  1s infinite linear; }
+      html body .loader .loader-three {
+        width: 100%;
+        height: 100%;
+        border: 2px solid;
+        border-radius: 50%;
+        border-color: transparent #000000;
+        box-sizing: border-box;
+        padding: 15px;
+        animation: loader .5s infinite linear; }
+
+@keyframes loader {
+  100% {
+    transform: rotate(360deg); } }
+@keyframes loaderSecond {
+  100% {
+    transform: rotate(-720deg); } }
+
+/*# sourceMappingURL=main.css.map */
